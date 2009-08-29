@@ -1,0 +1,14 @@
+Build.PL
+Changes
+INSTALL
+lib/HTML/Form/XSS.pm
+lib/HTML/Form/XSS/Result.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+root/config.xml
+script/check.pl
+t/00_use.t
+t/01_html_form_xss.t
+t/02_scripts.t
