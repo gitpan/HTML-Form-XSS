@@ -1,6 +1,6 @@
 ---
 name: HTML-Form-XSS
-version: 0.1
+version: 0.2
 author:
   - 'MacGyveR <dumb@cpan.org>'
 abstract: Test HTML forms for cross site scripting vulnerabilities.
@@ -8,19 +8,21 @@ license: perl
 requires:
   Carp: ""
   Data::Dumper: ""
+  HTML::XSSLint::Result: ""
+  XML::Simple: ""
 build_requires:
   HTML::Form: ""
   Test::More: ""
   WWW::Mechanize: ""
-generated_by: Module::Build version 0.280801
+generated_by: Module::Build version 0.31012
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2
 provides:
-  DT::XSSLint::Result:
-    file: lib/HTML/Form/XSS/Result.pm
   HTML::Form::XSS:
     file: lib/HTML/Form/XSS.pm
-    version: 0.1
+    version: 0.2
+  HTML::Form::XSS::Result:
+    file: lib/HTML/Form/XSS/Result.pm
 resources:
-  license: http://dev.perl.org/licenses/
+  license: ~
