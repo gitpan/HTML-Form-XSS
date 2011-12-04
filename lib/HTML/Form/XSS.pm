@@ -35,8 +35,6 @@ test returned.
 
 =head1 METHODS
 
-=over 4
-
 =cut
 
 use strict;
@@ -46,12 +44,12 @@ use XML::Simple;
 use Carp;
 use HTML::Form::XSS::Result;
 use base qw(HTML::XSSLint);	#we use this module as a base
-our $VERSION = 0.2;
+our $VERSION = 0.3;
 ###################################
 
 =pod
 
-=item new()
+=head2 new()
 
 	my $mech = WWW::Mechanize->new();
 	my $checker = HTML::Form::XSS->new($mech, config => '../root/config.xml');
@@ -101,7 +99,7 @@ sub make_params {	#passing a check value here, so we can do many checks
 
 =pod
 
-=item do_audit()
+=head2 do_audit()
 
 	my @results = $checker->do_audit($form);
 
@@ -172,7 +170,8 @@ sub _getConfig{
 sub _loadConfig{
 	my $self = shift;
 	my $file = $self->_getConfigFile();
-	my $ref = XMLin($file);
+	my $simple = XML::Simple->new();
+	my $ref = $simple->XMLin($file);
 	$self->{'_config'} = $ref;
 	return 1;
 }
@@ -190,8 +189,6 @@ sub _getMech{
 ###################################
 
 =pod
-
-=back
 
 =head1 SEE ALSO
 
