@@ -1,0 +1,55 @@
+{
+   "abstract" : "Test HTML forms for cross site scripting vulnerabilities.",
+   "author" : [
+      "MacGyveR <dumb@cpan.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4007, CPAN::Meta::Converter version 2.120630",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "HTML-Form-XSS",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "HTML::Form" : "0",
+            "Test::More" : "0",
+            "WWW::Mechanize" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Data::Dumper" : "0",
+            "HTML::XSSLint::Result" : "0",
+            "XML::Simple" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "HTML::Form::XSS" : {
+         "file" : "lib/HTML/Form/XSS.pm",
+         "version" : "0.31"
+      },
+      "HTML::Form::XSS::Result" : {
+         "file" : "lib/HTML/Form/XSS/Result.pm",
+         "version" : 0
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.31"
+}
