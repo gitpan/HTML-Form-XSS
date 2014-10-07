@@ -18,7 +18,7 @@ name: HTML-Form-XSS
 provides:
   HTML::Form::XSS:
     file: lib/HTML/Form/XSS.pm
-    version: 0.33
+    version: 0.34
   HTML::Form::XSS::Result:
     file: lib/HTML/Form/XSS/Result.pm
 requires:
@@ -28,4 +28,5 @@ requires:
   XML::Simple: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.33
+  repository: https://github.com/thedumbterminal/HTML-Form-XSS
+version: 0.34
